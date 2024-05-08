@@ -276,7 +276,7 @@
     border: 2px solid white;
     padding: 1.23em 2em;
     margin: 10px;
-    border-radius: 100px;
+    border-radius: 25px;
     transition: all 0.2s ease-in-out;
 }
 
@@ -295,9 +295,95 @@
     text-align: left;
 }
 
+.form__group-input {
+    position: relative;
+}
+
+.contact-form input,
+.contact-form textarea {
+    border: 2px solid transparent;
+    transition: .3s ease all;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border: 2px solid darkslateblue;
+    outline: none;
+}
+
+.form__input-error {
+    font-size: 0.9rem;
+    margin-bottom: 0;
+    display: none;
+}
+
+.form__input-error-active {
+    display: block;
+}
+
+.form__validation-state {
+    position: absolute;
+    right: 10px;
+    top: 7px;
+    z-index: 100;
+    font-size: 1rem;
+    opacity: 0;
+}
+
+.form__error-message {
+    background-color: #f66060;
+    border-radius: 3px;
+    padding-left: 10px;
+    display: none;
+}
+
+.form__error-message-active {
+    display: block;
+}
+
+.form__error-message p {
+    text-align: left;
+    margin: 0;
+}
+
+.form__item-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form__message-succesfull{
+    font-size: 1rem;
+    font-weight: bold;
+    color: greenyellow;
+    display: none;
+}
+
+.form__message-succesfull-active{
+    display: block;
+}
+
+/* Form Validations */
+
+.form-item-valid .form__validation-state{
+    color: #1ed12d;
+    opacity: 1;
+}
+
+.form-item-invalid .form__validation-state{
+    color: #f66060;
+    opacity: 1;
+}
+
+.form-item-invalid .form-control{
+    border: 2px solid #f66060;
+}
+
+
+
 /* Footer Section*/
 footer {
-    min-height: 500px;
+    min-height: 400px;
 }
 
 .footer-logo {

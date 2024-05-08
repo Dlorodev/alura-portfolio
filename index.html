@@ -343,24 +343,54 @@
                             imaginación sea realidad</div>
                     </div>
                     <div class="col-sm-12 col-md-8 col-lg 6">
-                        <form>
-                            <div class="mb-3 form-item">
+                        <form action="https://formsubmit.co/dlorodev@gmail.com" method="POST" class="contact-form"
+                            novalidate>
+                            <div class="mb-3 form-item" id="name-group">
                                 <label for="exampleInputName" class="form-label">Nombre</label>
-                                <input type="text" class="form-control" id="exampleInputName">
+                                <div class="form__group-input">
+                                    <input type="text" class="form-control" name="nombre" id="exampleInputName"
+                                        required>
+                                    <i class="form__validation-state bi bi-x-circle-fill"></i>
+                                </div>
+                                <p class="form__input-error">El nombre debe contener entre 3 y 50 caracteres</p>
                             </div>
-                            <div class="mb-3 form-item">
+                            <div class="mb-3 form-item" id="email-group">
                                 <label for="exampleInputEmail1" class="form-label">e-mail</label>
-                                <input type="email" class="form-control" id="exampleInputEmail1">
+                                <div class="form__group-input">
+                                    <input type="email" class="form-control" name="email" id="exampleInputEmail1"
+                                        autocomplete="true" required>
+                                    <i class="form__validation-state bi bi-x-circle-fill"></i>
+                                </div>
+                                <p class="form__input-error">El e-mail debe tener este formato ejemplo@correo.com</p>
                             </div>
-                            <div class="mb-3 form-item">
+                            <div class="mb-3 form-item" id="asunto-group">
                                 <label for="exampleInputAsunto" class="form-label">Asunto</label>
-                                <input type="text" class="form-control" id="exampleInputAsunto">
+                                <div class="form__group-input">
+                                    <input type="text" class="form-control" name="asunto" id="exampleInputAsunto"
+                                        required>
+                                    <i class="form__validation-state bi bi-x-circle-fill"></i>
+                                </div>
+                                <p class="form__input-error">El asunto debe contener entre 3 y 50 caracteres</p>
                             </div>
-                            <div class="mb-3 form-item">
+                            <div class="mb-3 form-item" id="mensaje-group">
                                 <label class="form-label" for="exampleMensaje">Mensaje</label>
-                                <textarea class="form-control" rows="4" id="exampleMensaje"></textarea>
+                                <div class="form__group-input">
+                                    <textarea class="form-control" rows="4" name="mensaje" id="exampleMensaje" required>
+                                    </textarea>
+                                    <i class="form__validation-state bi bi-x-circle-fill"></i>
+                                </div>
+                                <p class="form__input-error">El mensaje debe contener maximo 250 caracteres</p>
                             </div>
-                            <button type="submit" class="btn btn-primary">Submit</button>
+                            <div class="form__error-message">
+                                <p><i class="bi bi-exclamation-circle-fill"></i> <b>Error:</b> Completa el formulario
+                                    correctamente.</p>
+                            </div>
+                            <div class="form-item form__item-btn">
+                                <button type="submit" class="btn btn-primary">Submit</button>
+                                <p class="form__message-succesfull">Formulario enviado exitosamente!</p>
+                            </div>
+                            <input type="hidden" name="_captcha" value="false">
+                            <input type="hidden" name="_next" value="https://dlorodev.github.io/alura-portfolio/">
                         </form>
                     </div>
                 </div>
