@@ -291,6 +291,10 @@
     color: black;
 }
 
+.contact .form-item {
+    text-align: left;
+}
+
 /* Footer Section*/
 footer {
     min-height: 500px;
